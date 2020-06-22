@@ -24,6 +24,17 @@ struct node
 struct node *head,*lastptr;
 bool check=true;
 int arr[20]={0},i=0;
+bool check_id(int ch)
+{
+  	    for(int a=0;a<i;a++)
+  	    {
+  	    	if(ch==arr[a])
+  	    	{
+  	    		return true;
+			}
+		}
+		return false;
+};
 class doctor
 {
 	public:
@@ -75,21 +86,12 @@ class doctor
   {
   	    int n;
   	    node *current=NULL,*prev=NULL;
-  	    //current =new node;
   	    prev=head;
   	    current=head;
   	    int ch;
-  	    cout<<"enter Patient ID"<<endl;
+ 	    cout<<"enter Patient ID"<<endl;
   	    cin>>ch;
-  	    bool idpresent=false;
-  	    for(int a=0;a<i;a++)
-  	    {
-  	    	if(ch==arr[a])
-  	    	{
-  	    		idpresent=true;
-			}
-		}
-		if(idpresent)
+		if(check_id(ch))
 		{
   	    while(current->id!=ch)
   	    {
@@ -112,7 +114,7 @@ class doctor
 	  	cout<<"enter Patient Contact "<<endl;
 	  	cout<<current->contact<<endl;
 	  	cout<<"CNIC number"<<endl;
-	  	cout<<current->cnic;
+	  	cout<<current->cnic<<endl;
 	  	cout<<"enter Patient Address"<<endl;
 	    cout<<current->address<<endl;
 	    cout<<"*********************************"<<endl;
@@ -141,13 +143,7 @@ class doctor
   	int ch;
   	cout<<"enter Patient ID"<<endl;
   	cin>>ch;
-  	bool idPresent=false;
-  	for(int a=0;a<i;a++)
-  	{
-  		if(ch==arr[a])
-  			idPresent=true;
-	}
-	if(idPresent){
+	if(check_id(ch)){
 		while(p->id!=ch )
 	  	{
 	  		prev=p;
@@ -176,18 +172,12 @@ void deleteList()
   	    //current =new node;
   	prev=head;
   	current=head;
-  	int n;
+  	int ch;
 	cout<<"Enter the ID: ";
-	cin>>n;
-	bool idPresent=false;
-  	for(int a=0;a<i;a++)
-  	{
-  		if(n==arr[a])
-  			idPresent=true;
-	}
-	if(idPresent){
+	cin>>ch;
+	if(check_id(ch)){
 //	temp=head;
-		while(current->id!=n)
+		while(current->id!=ch)
   	    {
   	    	prev=current;
   	    	current=current->next;
@@ -204,7 +194,7 @@ void deleteList()
 //    }
       for(int a=0;a<i;a++)
       {
-      	if(arr[a]==n){
+      	if(arr[a]==ch){
       		for (int j=a;j<i;j++){
       			arr[j]=arr[j+1];
 			  }
@@ -213,6 +203,8 @@ void deleteList()
 	  }
     cout<<"SUCCESSFULLY DELETED ALL NODES OF LINKED LIST\n";
     }
+    else
+       cout<<"ID not present"<<endl;
 }
 void update_menu()
 {
@@ -238,13 +230,7 @@ void update_data(){
 	int id,ch;
 	cout<<"enter ID"<<endl;
 	cin>>id;
-	bool idPresent=false;
-    for(int a=0;a<i;a++)
-  	{
-  		if(id==arr[a])
-  			idPresent=true;
-	}
-	if(idPresent){
+	if(check_id(id)){
 		while(current->id!=id)
   	    {
   	    	prev=current;
@@ -306,6 +292,8 @@ void update_data(){
 	    cin>>current->addmission;
 	}
    }
+   else
+     cout<<"ID not present"<<endl;
 }
 };
 
