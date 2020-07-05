@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>doctor_priscription</title>
+</head>
+<style type="text/css">
+
+
+ body{
+    	display: flex;
+    	flex-direction: column;
+    	background-image: url(images.jfif);
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	background-size: cover;
+        align-items: center;
+    }	
+ .uperlabel
+
+{
+	color: white;
+	padding: 4px;
+	font-family: Arial;
+	background-color:  #2196F3;
+	opacity: 0.5; 
+	font-size: 20px;
+	text-align: center;
+	width: 100%;
+	margin-top:20px; 
+}
+.signname:focus
+{
+   border:1px solid #2196F3;
+}
+.Priscription{
+	color: white;
+	padding: 8px;
+	font-family: Arial;
+	background-color: #2196F3;
+	opacity: 0.5; 
+	font-size: 20px;
+	text-align: center;
+	width: 30%;
+	margin-top: 20px;
+}{
+	color: white;
+	padding: 8px;
+	font-family: Arial;
+	background-color: #2196F3;
+	opacity: 0.5; 
+	font-size: 20px;
+	text-align: center;
+	width: 30%;
+	margin-top: 20px;
+}
+input[type="text"],textarea{
+	background-color: white;
+	border-radius: 10px;
+	resize: none;
+	border: none;
+	width: 200px;
+	margin-top: 30px;
+
+}
+.signname{
+	margin-top: 5px;
+    border:none;
+    box-shadow: 1px 3px 5px grey;
+    height: 20px;
+    box-sizing: border-box;
+    margin: 8px;
+    border-radius: 8px;
+}
+.signname:focus{
+   border:1px solid #2196F3;
+}
+
+
+.signupbtn{
+	padding: 8px;
+	margin-top: 10px;
+	width: 50%;
+	background-color: skyblue;
+	color: black;
+	margin: 50px;
+	border-radius: 12px;
+    right: 50px;
+}
+.div{
+	margin-top: 50px;
+	align-items: center;
+	
+	width: 200px;
+}
+</style>
+<body>
+<span class="uperlabel">MEDICS PORTAL </span>
+<span id="PriscriptionLabel" class="Priscription">Priscription Pad</span>
+<div class="div">
+E-mail:
+<br>
+<input class="signname" type="text" name="email">
+<br>
+Priscription:
+<br>
+<textarea name="textarea" cols="25" rows="7" ></textarea>
+<input class="signupbtn" type="submit" name="Submit">
+
+</div>
+</body>
+</html>

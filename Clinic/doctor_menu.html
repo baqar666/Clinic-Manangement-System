@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doctor Menu</title>
+</head>
+<style type="text/css">
+			.btn-group button {
+  background-color:#0080ff; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  /*top: 450px;*/
+  /*left: 500px;*/
+  position: relative;
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */ 
+  border-radius: 5%;
+  /* Float the buttons side by side */
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #0000ff;
+
+}
+.btn-group {
+	/*width: 33%;*/
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-self:  center;
+	position: relative;
+	margin-left: 10px;
+	/*padding: 20px*/
+}
+.btn-group div {
+	display: flex;
+	flex-direction: column;
+	align-items:   center;
+	justify-content: center;
+	width:100px;
+	height: 100px;
+	overflow: hidden;
+	margin-right: 10px;
+	padding: 12px;
+	margin-top: 50px;
+	/*align-self: center;*/
+}
+	.image {
+	display: flex;
+	border-radius: 50%;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+
+	/*width: 20%;*/
+	/*overflow: hidden;*/
+	/*flex-direction: column;*/
+}
+.image:hover{
+
+	box-shadow: 2px 5px 5px 2px grey;
+}
+</style>
+<body>
+<div class="btn-group">
+
+	<div>
+		<input class="image" type="image" name="pharmacist" src="pharmacist.png"><label>Remove Data</label>	
+	</div>
+	<div>
+		<input class="image" type="image" name="doctor" src="doctor.jpg"><label>Update Data</label>	
+	</div>
+	<div>
+		<input class="image" type="image" name="patient" src="Patient.png"><label>prescription</label>	
+	</div>
+</div>
+</body>
+</html>
